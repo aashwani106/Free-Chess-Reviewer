@@ -2,10 +2,10 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/next",
-        "config": {
-          "installCommand": "npm install && npx @puppeteer/browsers install chrome@stable"
-        }
+        "use": "@vercel/next"
       }
-    ]
+    ],
+    "env": {
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "false"
+    }
   } 

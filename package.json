@@ -7,14 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "npx @puppeteer/browsers install chrome@stable"
+    "postinstall": "node node_modules/puppeteer/install.js"
   },
   "dependencies": {
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
-    "puppeteer": "^24.2.1",
+    "puppeteer": "^21.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@puppeteer/browsers": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
