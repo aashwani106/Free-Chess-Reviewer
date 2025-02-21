@@ -26,14 +26,20 @@ export async function POST(request: NextRequest) {
      
     console.log('Received game URL for analysis:', gameUrl);
 
-    // Launch headless browser
+    // Updated browser launch configuration for Vercel
     browser = await puppeteer.launch({
       headless: true,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process',
         '--disable-blink-features=AutomationControlled'
       ],
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome',
       defaultViewport: { width: 1280, height: 800 }
     });
 
