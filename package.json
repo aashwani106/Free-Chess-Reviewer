@@ -12,10 +12,10 @@
   "dependencies": {
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
-    "puppeteer": "^21.0.0",
+    "puppeteer": "^22.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@puppeteer/browsers": "^1.0.0"
+    "@puppeteer/browsers": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
